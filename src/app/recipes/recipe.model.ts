@@ -2,7 +2,7 @@ export class Recipe {
   constructor(
     public name: string,
     public description: string,
-    public imagePath: string|null,
+    public imagePath: string|null = null,
   ) {
   }
 }

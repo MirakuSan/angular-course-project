@@ -22,7 +22,7 @@ import { ShoppingEditComponent } from './shopping/shopping-list/shopping-edit/sh
     ShoppingEditComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
