@@ -1,16 +1,21 @@
 <div class="row">
-  <div class="col-xs-10">
+  <div class="col-10">
     <app-shopping-edit></app-shopping-edit>
     <hr>
     <ul class="list-group">
-      @for (ingredient of ingredients; track ingredient) {
-        <a
-          class="list-group-item"
-          style="cursor: pointer"
-        >
-          {{ ingredient.name }} ({{ ingredient.amount }})
-        </a>
-      }
+      <a
+        *ngFor="let ingredient of ingredients"
+        class="list-group-item"
+        style="cursor: pointer"
+      >
+        {{ ingredient.name }} ({{ ingredient.amount }})
+      </a>
+      <li
+        *ngIf="ingredients.length === 0"
+        class="list-group-item"
+      >
+        List is empty.
+      </li>
     </ul>
   </div>
 </div>
